@@ -5,7 +5,7 @@ function checkLogin() {
     var email = localStorage.getItem('user-email');
     var name = localStorage.getItem('user-name');
     var delay = 5000;
-    var url = 'about.html';
+    var url = 'advert.html';
     
     if((email === null) && (name === null)) {
         $('#user-form').removeClass('hidden');
@@ -28,6 +28,13 @@ function deleteLogin() {
 }
 
 
+/* advert.html */
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+function getAdvert() {
+    var url = "http://apptest.dev/img/advert.jpg";
+    $.getElementsByTagName('')
+
+}
 
 
 // Actions

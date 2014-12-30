@@ -1,9 +1,10 @@
-
+/* index.html */
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Checks if login credentials have been set
 function checkLogin() {
     var email = localStorage.getItem('user-email');
     var name = localStorage.getItem('user-name');
-    var delay = 2000;
+    var delay = 5000;
     var url = 'about.html';
     
     if((email === null) && (name === null)) {
@@ -25,6 +26,9 @@ function deleteLogin() {
     localStorage.removeItem('user-email');
     localStorage.removeItem('user-name');
 }
+
+
+
 
 // Actions
 

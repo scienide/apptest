@@ -31,9 +31,10 @@ function deleteLogin() {
 /* advert.html */
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 function getAdvert() {
-    var url = "http://apptest.dev/img/advert.jpg";
-    $.getElementsByTagName('')
-
+    var url = "http://apptest.dev/feed-tmp/advert.js";
+    $.getJSON(url, function(object) {
+        alert(object);
+    });
 }
 
 

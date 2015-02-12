@@ -21,7 +21,7 @@ $( document ).ready(function() {
 	* [1+] 	= params to pass on to intitial function
 	*/
 	function loadController(data) {
-		$.getScript("/controllers/" + data[0] + "-controller.js")
+		$.getScript("controllers/" + data[0] + "-controller.js")
 			.done(function(script, textStatus) {
 			})
 			.fail(function( jqxhr, settings, exception ) {

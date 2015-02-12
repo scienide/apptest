@@ -3,9 +3,9 @@ function setView() {
     var name   = localStorage.getItem('user-name');
 
     if((email === null) && (name === null)) {
-		$('#main').load("/views/index.html #logged-out" );
+		$('#main').load("views/index.html #logged-out" );
 	} else {
-		$('#main').load("/views/index.html #logged-in" );
+		$('#main').load("views/index.html #logged-in" );
 	}
 }
 

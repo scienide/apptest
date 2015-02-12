@@ -1,0 +1,61 @@
+	<!-- Logged in screen -->
+	<div class="container" id="logged-in">
+        <div class="row" style="text-align:center;">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <!-- splash Logo -->
+                <img src="/img/splash-logo.jpg" style="width:100%;" alt='' />
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+
+
+<!-- ==================================================================================== -->
+
+	<!-- [start] If the user hasn't entered an email already -->                
+    <div class="row" style="margin-top:30px;" id="logged-out">
+
+        <div class="row" style="text-align:center;">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <!-- splash Logo -->
+                <img src="/img/splash-logo.jpg" style="width:100%;" alt='' />
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <div class="well">
+                <form class="form-horizontal" name="user-set" id="user-set" method="post">
+                    <fieldset>
+                        <legend>Please enter your email - you only need to do this once</legend>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName" class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-10">
+                                <input class="form-control" id="inputName" placeholder="Name" type="text">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <a href="/#hub"<button class="btn btn-primary">Skip</button></a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    <!-- [end] If the user hasn't entered an email already -->

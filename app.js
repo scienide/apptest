@@ -1,6 +1,6 @@
-// This is the core app.js file.
+//This is the core app.js file.
 $( document ).ready(function() {
-	
+
 	// Get the URL and parse as array
 	function bootstrap() {
   		var pathString	=  window.location.hash.replace('#','');	// Get the URL
@@ -21,27 +21,34 @@ $( document ).ready(function() {
 	* [1+] 	= params to pass on to intitial function
 	*/
 	function loadController(data) {
-		$.getScript("controllers/" + data[0] + "-controller.js")
-			.done(function(script, textStatus) {
-			})
-			.fail(function( jqxhr, settings, exception ) {
-				$( "div.log" ).text( "Triggered ajaxError handler." );
+
+		// Check if controller object exists and if not, create it.
+		if (typeof controller == "undefined") {
+			var controller = new Controller();
+		}
+/*
+		// Load the appropriate model
+		$.when(
+			$.getScript("models/" 	+ data[0] + "-model.js"),
+    		$.Deferred(function( deferred ){
+        		$( deferred.resolve );
+    		})
+			).done(function(){
+				
 			});
 
-		$.getScript("/models/" + data[0] + "-model.js")
-			.done(function(script, textStatus) {
-			})
-			.fail(function( jqxhr, settings, exception ) {
-				$( "div.log" ).text( "Triggered ajaxError handler." );
-			});
+*/
+		controller.setview(data);
+
+
 	}
 	
 	
 	// Gets the state change also applies a nice fade
 	$(window).on('hashchange', function(e){
-		$( "#main" ).fadeOut( "fast", function() {
+		$( "#main" ).fadeOut( "slow", function() {
     		if(bootstrap()) {
-    			$( "#main" ).fadeIn( "fast" );
+    			$( "#main" ).fadeIn( "slow" );
 			}
 		});
 	});

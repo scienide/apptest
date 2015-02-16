@@ -46,9 +46,9 @@ $( document ).ready(function() {
 	
 	// Gets the state change also applies a nice fade
 	$(window).on('hashchange', function(e){
-		$( "#main" ).fadeOut( "slow", function() {
+		$( "#main" ).fadeOut( "fast", function() {
     		if(bootstrap()) {
-    			$( "#main" ).fadeIn( "slow" );
+    			$( "#main" ).fadeIn( "fast" );
 			}
 		});
 	});

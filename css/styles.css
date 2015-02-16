@@ -1,3 +1,11 @@
 #nav {
 	margin-bottom: 70px; 
 }
+.navbar-nav, .navbar-collapse, #bs-example-navbar-collapse-1{
+	background-color: rgba(0,0,0,0.1);
+}
+
+body {
+	background: url('../img/main-bg.png') fixed bottom no-repeat black;
+	background-size: 100%;
+}

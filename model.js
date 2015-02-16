@@ -15,6 +15,15 @@ $("#main").on("submit", "form[name=user-set]", function(e) {
 });
 
 
+// ==============================
+// HUB FUNCTIONS
+
+// links for buttons
+$("#main").on("click", ".hub-button", function(){
+	alert(this.id);
+});
+
+
 });
 
 // Sets the local storage of email and name

@@ -16,7 +16,7 @@ function Controller() {
 					$('#main').load("views/index.html #logged-out");
 				} else {
 					$('#main').load("views/index.html #logged-in");
-					// Try to get latest JSON from server here
+					// Try to get latest JSON from server here	
 					setTimeout(function () {
        					window.location.href = "#hub"; //will redirect to your blog page (an ex: blog.html)
     				}, 2000);
@@ -24,23 +24,54 @@ function Controller() {
 				}
 				break;
 
+			// ------------------------------------------------------------------------------------------
 			// [2] Hub
 			case 'hub':
 				$('#nav').load("views/partials/nav.html" , function() {
 					$('#main').load("views/hub.html" );
-					// Hide the welcome text after first view
+
+					// IMPORTANT - First run Hide the welcome text after first view
 					if(localStorage.initial == undefined) {
-						$("#hub-welcome").removeclass('hide');
+						$("#hub-welcome").removeClass('hide');
+
 						localStorage.setItem("initial", "true");
 					}	
+					setJsonData();								// Set the embedded JSON file in local storage
 				});
 				break;
+
+			// ------------------------------------------------------------------------------------------
 			// [3] About
 			case 'about':
 				$('#nav').load("views/partials/nav.html" , function() {
 					$('#main').load("views/about.html" );
 				});
 				break;
+			
+			// ------------------------------------------------------------------------------------------
+			// [4] Nightclubs
+			case 'nightclubs':
+				$('#nav').load("views/partials/nav.html" , function() {
+					$('#main').load("views/nightclubs.html" );
+				});
+				break;
+
+			// ------------------------------------------------------------------------------------------
+			// [5] Dayclubs
+			case 'dayclubs':
+				$('#nav').load("views/partials/nav.html" , function() {
+					$('#main').load("views/dayclubs.html" );
+				});
+				break;
+			
+			// ------------------------------------------------------------------------------------------
+			// [6] Services
+			case 'services':
+				$('#nav').load("views/partials/nav.html" , function() {
+					$('#main').load("views/services.html" );
+				});
+				break;
+
  			// [n] Default = hub
  			default: 
 				$('#nav').load("views/partials/nav.html" , function() {

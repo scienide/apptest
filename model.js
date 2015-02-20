@@ -18,7 +18,7 @@ $( document ).ready(function() {
 
 	// links for buttons
 	$("#main").on("click", ".hub-button", function(){
-		alert(this.id);
+		$(this).addClass('warning');
 	});
 
 

@@ -71,6 +71,15 @@ function Controller() {
 					$('#main').load("views/services.html" );
 				});
 				break;
+			
+			// ------------------------------------------------------------------------------------------
+			// [7] Nightclub
+			case 'nightclub':
+				$('#nav').load("views/partials/nav.html" , function() {
+					setEventData('nightclub',data[1]);
+					$('#main').load("views/nightclub.html" );
+				});
+				break;
 
  			// [n] Default = hub
  			default: 

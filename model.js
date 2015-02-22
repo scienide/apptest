@@ -51,11 +51,19 @@ function setLogin(email,name) {
 
 // ==============================
 // EVENT FUNCTIONS
-function getJson(kind) {
-	/*
-	var url = 'http://uk2vip.com/event/return-event-json/' + kind;
 
-	var jqxhr = $.get( url, function() {
-		alert( "success" );
-	}); */
+// This gets the event data from 
+function setEventData(kind, event) {
+	var data = JSON.parse(localStorage.getItem(kind + '-data'));
+	
+	$.each(data, function(index,value) {
+		if(index == event) {
+			sessionStorage.nightclub_id 		= value.id; 
+			sessionStorage.nightclub_name 		= value.name; 
+			sessionStorage.nightclub_long 		= value.long; 
+			sessionStorage.nightclub_address 	= value.address;
+			sessionStorage.nightclub_latitude 	= value.latitude;
+			sessionStorage.nightclub_longitude 	= value.longitude;
+		}
+	});
 }

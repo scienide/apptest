@@ -12,17 +12,20 @@
       var nightclubs = JSON.parse(localStorage.getItem('nightclub-data'));
       $.each(nightclubs, function(index,value) {
         content = [];
-        content.push("<div class='panel panel-default panel-graphic' style='background-image:url(img/events/bg-"+value.id+".jpg);'>");
-          content.push("<div class='panel-body'>");
 
-              content.push("<div class='col-xs-10 col-xs-offset-1' style='margin-top:10px;'>");
-                content.push("<h4>" + value.name +  "</h4>");
-                content.push("<p>"  + value.short + "</p>");
-              content.push("</div>");  
+        content.push("<a href='#nightclub/" + value.id + "'>");
+          content.push("<div class='panel panel-default panel-graphic' id='event-id-"+value.id+"' style='background-image:url(img/events/bg-"+value.id+".jpg);'>");
+            content.push("<div class='panel-body'>");
+
+                content.push("<div class='col-xs-10 col-xs-offset-1' style='margin-top:10px;'>");
+                  content.push("<h4>" + value.name +  "</h4>");
+                  content.push("<p>"  + value.short + "</p>");
+                content.push("</div>");  
 
 
+            content.push("</div>");
           content.push("</div>");
-        content.push("</div>");
+        content.push("</a>");
 
 
         $('#result').append(content.join("\n"));

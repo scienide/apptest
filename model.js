@@ -60,6 +60,7 @@ function setEventData(kind, event) {
 		if(index == event) {
 			sessionStorage.nightclub_id 		= value.id; 
 			sessionStorage.nightclub_name 		= value.name; 
+			sessionStorage.nightclub_short		= value.short; 
 			sessionStorage.nightclub_long 		= value.long; 
 			sessionStorage.nightclub_address 	= value.address;
 			sessionStorage.nightclub_latitude 	= value.latitude;

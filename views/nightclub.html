@@ -61,7 +61,7 @@ $( document ).ready(function() {
 	var long = sessionStorage.nightclub_long.replace(/(\r\n|\n|\r)/g,"<br><br>");
 	$('.long').html(long);
 	$('address').html
-	$('#logo').html('<img src="/img/events/logo-' + sessionStorage.nightclub_id  + '.png" width="130%" >');
+	$('#logo').html('<img src="img/events/logo-' + sessionStorage.nightclub_id  + '.png" width="130%" >');
 	$('#hero').css('background-image', 'url(img/events/main-bg-' + sessionStorage.nightclub_id + '.jpg)');
 	// Modal
 	$('.modal-header').html(sessionStorage.nightclub_name);
@@ -75,8 +75,8 @@ $( document ).ready(function() {
 </script>
 
 <style type="text/css">
-	#hero { background-color: rgba(50,0,0,1);}
-	#ldogo {width: auto;}
+	#hero { background-color: rgba(50,0,0,1); max-height: 350px;}
+	#ldogo {width: auto; max-height: 100px;}
 	#intro {margin-top: 7%;}
 	#top-wrap {}
 

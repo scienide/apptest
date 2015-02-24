@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="row">
+	<div class="row" id="top-wrap">
 		<div class="col-lg-12" id="hero">
 			<div class="row">
 				<div class="col-xs-4" id='logo'>
@@ -10,28 +10,74 @@
 					<p class="lead"></p>
 				</div>
 			
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top:30px;">
+
+		<!-- Links -->
+		<div class="col-lg-12">
+			<div class="btn-group btn-group-justified">
+				<a href="#" class="btn btn-primary">Book now</a>
+				<a href="#" class="btn btn-default" data-toggle="modal" data-target="#modal-address">Address</a>
+			</div>
+		</div>
+
+		<!-- description -->
+		<div class="col-lg-12">
+			<p class="long" style="text-align:justify; margin-top:30px;"></p>
+			<p class="address"></p>
 		</div>
 	</div>
 </div>
-<p class="long"></p>
-<p class="address"></p>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-address">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        		<h4 class="modal-title"></h4>
+      		</div>
+      		
+      		<div class="modal-body"></div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        		<a id="navigate-button">
+        			<button type="button" class="btn btn-primary">Navigate</button>
+        		</a>
+      		</div>
+    	</div>
+  	</div>
+</div>
+
+
 <script>
 <!-- 
 $( document ).ready(function() {
-
 	$('h4').html(sessionStorage.nightclub_name);
 	$('.lead').html(sessionStorage.nightclub_short);
-	$('.long').html(sessionStorage.nightclub_long);
-	$('address').html(sessionStorage.nightclub_address);
+	var long = sessionStorage.nightclub_long.replace(/(\r\n|\n|\r)/g,"<br><br>");
+	$('.long').html(long);
+	$('address').html
 	$('#logo').html('<img src="/img/events/logo-' + sessionStorage.nightclub_id  + '.png" width="130%" >');
 	$('#hero').css('background-image', 'url(img/events/main-bg-' + sessionStorage.nightclub_id + '.jpg)');
+	// Modal
+	$('.modal-header').html(sessionStorage.nightclub_name);
+	var address = sessionStorage.nightclub_address.replace(",",",<br><br>");
+	$('.modal-body').html(address);
+	// set nav link
+	$('#navigate-button').attr('href','geo:' + sessionStorage.nightclub_latitude + ',' + sessionStorage.nightclub_longitude);
+
 });
 //-->
 </script>
 
 <style type="text/css">
-	#hero {min-heighta: 350px;}
+	#hero { background-color: rgba(50,0,0,1);}
 	#ldogo {width: auto;}
 	#intro {margin-top: 7%;}
+	#top-wrap {}
 
 </style>

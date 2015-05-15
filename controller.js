@@ -73,6 +73,25 @@ function Controller() {
 				break;
 			
 			// ------------------------------------------------------------------------------------------
+			// [7] Contact
+			case 'contact':
+				$('#nav').load("views/partials/nav.html" , function() {
+					if(data[1] != null) {
+						setContactData('event',data[1]);
+					}
+					$('#main').load("views/contact.html" );
+				});
+				break;
+
+			// ------------------------------------------------------------------------------------------
+			// [8] settings
+			case 'settings':
+				$('#nav').load("views/partials/nav.html" , function() {
+					$('#main').load("views/settings.html" );
+				});
+				break;
+
+			// ------------------------------------------------------------------------------------------
 			// [7] Nightclub
 			case 'nightclub':
 				$('#nav').load("views/partials/nav.html" , function() {
@@ -80,6 +99,17 @@ function Controller() {
 					$('#main').load("views/nightclub.html" );
 				});
 				break;
+
+			// ------------------------------------------------------------------------------------------
+			// [7] Dayclub
+			case 'dayclub':
+				$('#nav').load("views/partials/nav.html" , function() {
+					setEventData('dayclub',data[1]);
+					$('#main').load("views/dayclub.html" );
+				});
+				break;
+
+
 
  			// [n] Default = hub
  			default: 

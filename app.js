@@ -26,21 +26,7 @@ $( document ).ready(function() {
 		if (typeof controller == "undefined") {
 			var controller = new Controller();
 		}
-/*
-		// Load the appropriate model
-		$.when(
-			$.getScript("models/" 	+ data[0] + "-model.js"),
-    		$.Deferred(function( deferred ){
-        		$( deferred.resolve );
-    		})
-			).done(function(){
-				
-			});
-
-*/
 		controller.setview(data);
-
-
 	}
 	
 	

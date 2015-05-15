@@ -55,19 +55,19 @@
 
 <script>
 $( document ).ready(function() {
-	$('h4').html(sessionStorage.nightclub_name);
-	$('.lead').html(sessionStorage.nightclub_short);
-	var long = sessionStorage.nightclub_long.replace(/(\r\n|\n|\r)/g,"<br><br>");
+	$('h4').html(sessionStorage.dayclub_name);
+	$('.lead').html(sessionStorage.dayclub_short);
+	var long = sessionStorage.dayclub_long.replace(/(\r\n|\n|\r)/g,"<br><br>");
 	$('.long').html(long);
 	$('address').html
-	$('#logo').html('<img src="img/events/logo-' + sessionStorage.nightclub_id  + '.png" width="130%" >');
-	$('#hero').css('background-image', 'url(img/events/main-bg-' + sessionStorage.nightclub_id + '.jpg)');
+	$('#logo').html('<img src="img/events/logo-' + sessionStorage.dayclub_id  + '.png" width="130%" >');
+	$('#hero').css('background-image', 'url(img/events/main-bg-' + sessionStorage.dayclub_id + '.jpg)');
 	// Modal
-	$('.modal-header').html(sessionStorage.nightclub_name);
-	//var address = sessionStorage.nightclub_address.replace(",",",<br><br>");
-	$('.modal-body').html(sessionStorage.nightclub_address);
+	$('.modal-header').html(sessionStorage.dayclub_name);
+	//var address = sessionStorage.dayclub_address.replace(",",",<br><br>");
+	$('.modal-body').html(sessionStorage.dayclub_address);
 	// set nav link
-	$('#navigate-button').attr('href','geo:' + sessionStorage.nightclub_latitude + ',' + sessionStorage.nightclub_longitude);
+	$('#navigate-button').attr('href','geo:' + sessionStorage.dayclub_latitude + ',' + sessionStorage.dayclub_longitude);
 
 });
 </script>
